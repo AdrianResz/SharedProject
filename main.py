@@ -90,3 +90,10 @@ button_save = tk.Button(root, text="Zapisz", command=lambda x:x)
 button_save.grid(row=20, column=0, columnspan=2, pady=10)
 # Uruchomienie pętli głównej
 root.mainloop()
+# Numer telefonu ograniczony tylko dla komórek
+numer = input("Podaj numer telefonu: ")
+print("Poprawny numer" if numer.startswith("+48") and numer[3:].isdigit() else "Niepoprawny numer")
+# Wybór języka obcego
+language = input("Wybierz język (1 - Polski, 2 - Angielski): ")
+print("Wybrany język:", "Polski" if language == '1' else "English" if language == '2' else "Nieznany język")
+
